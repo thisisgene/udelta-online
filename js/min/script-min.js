@@ -1,0 +1,1 @@
+!function($){function s(){var s=$(window).scrollTop(),e=$(".header-wrapper"),r=$(".nav-wrapper");s>100?r.css("transform","skewY(0deg)"):105>s&&r.css("transform","skewY(-5deg)"),s>140?e.addClass("get-small"):$(".get-small").removeClass("get-small")}$(window).scroll(function(){s()})}(jQuery);

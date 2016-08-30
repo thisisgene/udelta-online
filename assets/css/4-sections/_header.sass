@@ -1,0 +1,222 @@
+.header
+  position: relative
+  width: 100%
+  height: 150vh
+
+  background:
+    image: url(../img/coffee-bg.jpeg)
+    size: cover
+    attachment: fixed
+
+  overflow-x: hidden
+
+  .header-wrapper
+    width: 100%
+    display: flex
+    flex-direction: column
+    // height: auto
+    background: $color-main-bg
+    text-align: center
+    padding: 1rem 0 0rem
+    position: fixed
+    z-index: 3
+    transform-origin: 100%
+    +transition
+
+    // &:after
+    //   background: inherit
+    //   bottom: 0
+    //   content: ''
+    //   display: block
+    //   height: 60%
+    //   left: 0
+    //   opacity: 1
+    //   position: absolute
+    //   right: 0
+    //
+    //   z-index: -1
+    //   +transition
+      // box-shadow: 0 6px 30px rgba(black, .3)
+
+    &.get-small
+      // position: fixed
+      padding: 1rem
+      left: 0
+
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+
+
+      .title
+        height: 4rem
+        width: 12rem
+
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        margin-left: 2rem
+
+        .header-title
+          margin-top: 0rem
+          font-size: 2.4rem
+          text-align: left
+
+          &:hover
+            // color: $blue
+            @include filter (blur(0px))
+            // border-bottom: 10px solid white
+
+            // @include filter (drop-shadow(0 0px 0px rgba(black, .4)))
+
+
+            span
+              color: $yellow
+              @include filter (blur(0px))
+
+            & ~ .small-title
+              height: 0px
+
+            & ~ .small-title2
+              // border-bottom: 0px
+              height: 25px
+
+      .nav-wrapper
+        position: relative
+        padding-top: 0rem
+        padding-bottom: 0rem
+        margin-bottom: 0rem
+        top: auto
+        width: auto
+
+        nav
+          transform: rotateZ(0deg)
+          margin-top: 0rem
+          margin-bottom: 0rem
+          +transition
+
+          li
+            +transition
+            transform: rotate(0deg)
+            &:hover
+              transform: rotateZ(0deg)
+    .title
+      position: relative
+      left: 0
+      width: 100%
+      +transition
+
+
+
+    .header-title
+      font:
+        family: 'Open Sans'
+        size: 7rem
+        weight: 300
+      color: white
+      margin-bottom: -1rem
+      @include filter(blur(1px))
+      // @include filter (drop-shadow(0 0px 1px rgba(black, .1)))
+      cursor: pointer
+      +transition
+
+      span
+        color: transparentize(black, .7)
+        @include filter (blur(2px))
+        +transition
+
+
+      &:hover
+        // color: $blue
+        @include filter (blur(0px))
+        // border-bottom: 10px solid white
+
+        // @include filter (drop-shadow(0 0px 0px rgba(black, .4)))
+
+
+        span
+          color: $yellow
+          @include filter (blur(0px))
+
+        & ~ .small-title
+          height: 25px
+
+        & ~ .small-title2
+          // border-bottom: 0px
+          height: 0px
+
+
+
+    .small-title
+      background: $white
+      height: 0
+      overflow: hidden
+      +transition
+
+      p
+        color: #444
+        letter-spacing: 1px
+        font-size: .9rem
+        line-height: 25px
+
+    .small-title2
+      height: 25px
+      overflow: hidden
+      // border-bottom: 2px dotted transparentize(black, .9)
+      +transition
+
+      p
+        color: transparentize(black, .5)
+        @include filter (blur(1px))
+
+    .nav-wrapper
+      transform: skewY(-5deg)
+      background: $color-main-bg
+      bottom: 1rem
+      left: 0rem
+      top: 0rem
+      width: 100%
+      // margin-top: 5rem
+      padding-top: 12rem
+      padding-bottom: 3rem
+      margin-bottom: 3rem
+      // position: relative
+      z-index: -2
+      +transition
+      position: absolute
+      nav
+        // transform: rotateZ(-5deg)
+
+        ul
+
+          li
+
+            display: inline-block
+            transform: rotateZ(0deg)
+            margin: 0rem 2rem 0
+            +transition
+            &:hover
+              transform: scale(1.2) 
+
+              a
+                color: $yellow
+                // @include filter (drop-shadow(0 1px 0px rgba(white, 1)))
+
+
+            a
+              font-size: 1.4rem
+              color: white
+              letter-spacing: 2px
+              font-weight: lighter
+                // transform: scale(1)
+
+  .header-content
+    background: rgba($black, .5)
+    height: 100vh
+    padding: 25rem 6rem
+    color: $white
+    // max-width: 720px
+    margin: 0 auto
+    z-index: -1
